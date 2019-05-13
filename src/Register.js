@@ -5,13 +5,13 @@ import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import axios from 'axios';
 import Login from './Login';
-import { HardwareDesktopWindows } from 'material-ui/svg-icons';
+//import { HardwareDesktopWindows } from 'material-ui/svg-icons';
+
+var apiBaseUrl ="http://ec2-54-242-179-145.compute-1.amazonaws.com/TekReinvent/";	
 
 const style = {
-        margin: 15,
-    };
-
-var apiBaseUrl ="http://ec2-54-227-69-38.compute-1.amazonaws.com/TekReinvent/";	
+	margin: 15,
+};
 
 class Register extends Component {
     constructor(props) {
@@ -124,8 +124,7 @@ class Register extends Component {
                 /> 
 				<br />
                 <RaisedButton label = "Proceed" primary = {true} style = {style} onClick = {(event) => this.registerClick(event)}/>
-				
-					</div> 
+				</div> 
 				</MuiThemeProvider> 
 			</div>
 			)
@@ -162,29 +161,32 @@ class Register extends Component {
         var ck_email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i ;
         var ck_password =  /^[A-Za-z0-9!@#$%^&*()_]{8,20}$/;
         var ck_mob = /^[0-9]{10}$/;
+        var ck_pin = /^[0-9]{6}$/;
 
         var email = this.state.email;
         var phone = this. state.phone;
         var fname = this.state.firstName;
         var lname = this.state.lastName;
         var password = this.state.password;
+        var pin = this.state.pin;
 
         var msg = "";
 
         if(!ck_email.test(email)){
             msg = "You Entered a Wrong Email Address!";
-            
-
         }
         else if(!ck_password.test(password)){
-            msg = "Password Doesn't match the criteria\n Size> 8 letters\n Alphanumerals + !@#$%^&*()_ only!";
+            msg = "Password Doesn't match the criteria\n Size > 8 letters\n Alphanumerals + !@#$%^&*()_ only!";
         }
         else if(!ck_mob.test(phone)){
             msg = "You Entered Wrong Mobile number. \n Don't Add +91!";
-
         }
         else if(fname.length<1 && lname.length<1){
             msg = "Name Fields can't be null.";
+        }
+        else if(!ck_pin.test(pin)){
+            msg = "Wrong PIN Code!!!"
+
         }
         else {
 			

@@ -6,7 +6,7 @@ import TextField from 'material-ui/TextField';
 import axios from 'axios';
 import Dashboard from './Dashboard';
 
-var apiBaseUrl ="http://ec2-54-227-69-38.compute-1.amazonaws.com/TekReinvent/";	
+var apiBaseUrl ="http://ec2-54-242-179-145.compute-1.amazonaws.com/TekReinvent/";	
 
 class Login extends Component {
   constructor(props){
@@ -67,8 +67,8 @@ class Login extends Component {
 	   //console.log(data);
 	   
 	   var dashBoard = [];
-       dashBoard.push(<Dashboard appContext={self.props.appContext} data= {data} />)
-       self.props.appContext.setState({loginPage:[], dashboard:dashBoard})
+      dashBoard.push(<Dashboard appContext={self.props.appContext} data= {data} auth = {true}/>)
+      self.props.appContext.setState({loginPage:[], dashboard:dashBoard})
      }
      else if(response.status === 204){
        console.log("Username password do not match");

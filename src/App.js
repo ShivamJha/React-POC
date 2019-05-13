@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state={
       loginPage:[],
-	  dashboard:[]
+	    dashboard:[]
     }
   }
   componentWillMount(){
@@ -26,7 +26,8 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.loginPage}
-		{this.state.dashboard}
+        {this.state.dashboard}
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"></link>
       </div>
     );
   }
