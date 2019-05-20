@@ -7,7 +7,7 @@ import axios from 'axios';
 import Login from './Login';
 //import { HardwareDesktopWindows } from 'material-ui/svg-icons';
 
-var apiBaseUrl ="http://ec2-54-158-12-57.compute-1.amazonaws.com/TekReinvent/";	
+var apiBaseUrl ="http://ec2-52-73-241-191.compute-1.amazonaws.com/TekReinvent/";	
 
 const style = {
 	margin: 15,
