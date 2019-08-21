@@ -4,11 +4,13 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.3",
-    "axios": "^0.18.0",
+    "axios": "^0.18.1",
+    "lodash.merge": "^4.6.2",
     "material-ui": "^0.20.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-scripts": "3.0.0"
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-scripts": "3.0.0",
+    "typescript": "^3.5.3"
   },
   "scripts": {
     "start": "react-scripts start",

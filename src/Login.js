@@ -6,7 +6,8 @@ import TextField from 'material-ui/TextField';
 import axios from 'axios';
 import Dashboard from './Dashboard';
 
-var apiBaseUrl ="http://ec2-52-73-241-191.compute-1.amazonaws.com/TekReinvent/";	
+var apiBaseUrl = "http://localhost:8080/";
+//var apiBaseUrl ="http://ec2-52-73-241-191.compute-1.amazonaws.com/TekReinvent/";	
 
 class Login extends Component {
   constructor(props){
