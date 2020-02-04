@@ -22,7 +22,8 @@ class App extends Component {
       <div className="App">
         {this.state.loginPage}
         {this.state.dashboard}
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500"></link>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />      
       </div>
     );
   }
