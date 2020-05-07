@@ -3,19 +3,19 @@ import './App.css';
 import LoginScreen from './Loginscreen.js';
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state={
-      loginPage:[],
-	    dashboard:[]
+    this.state = {
+      loginPage: [],
+      dashboard: []
     }
   }
-  componentWillMount(){
-    var loginPage =[];
-    loginPage.push(<LoginScreen appContext={this}/>);
+  componentWillMount() {
+    var loginPage = [];
+    loginPage.push(<LoginScreen appContext={this} />);
     this.setState({
-                  loginPage:loginPage
-                    })
+      loginPage: loginPage
+    })
   }
   render() {
     return (
@@ -23,7 +23,7 @@ class App extends Component {
         {this.state.loginPage}
         {this.state.dashboard}
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />      
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
       </div>
     );
   }
